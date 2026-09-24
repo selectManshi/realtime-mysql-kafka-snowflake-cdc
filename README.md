@@ -1,6 +1,6 @@
 # Real-Time MySQL → Snowflake CDC Pipeline
 
-A cost-conscious CDC practice project that uses **AWS Aurora MySQL, AWS DMS, S3, and Snowflake**, with an optional local **MySQL → Debezium → Kafka** experiment. The MySQL source in the original project has been converted to MySQL.
+A cost-conscious CDC practice project that uses **AWS Aurora MySQL, AWS DMS, S3, and Snowflake**, with an optional local **MySQL → Debezium → Kafka** experiment. The source database and related infrastructure have been adapted for MySQL.
 
 ## Main AWS Flow
 ```
@@ -53,6 +53,4 @@ Aurora Serverless v2 at 0.5–2 ACU, DMS Serverless capped at 2 units, an XS Sno
 `terraform destroy`, then `snowflake/99_cleanup.sql`.
 
 ## Known limitations
-No monitoring or failure alerts, database password passed to the Lambda as an environment variable, Aurora is publicly reachable (restricted to one IP), Snowflake is set up with SQL rather than Terraform, and no data quality checks. The delete path is designed but was not fully tested. Not load-tested for high volume.
-
-> This repository is based on the supplied project files; the source database has been changed from MySQL to MySQL.
+No monitoring or failure alerts, but can be added.The delete path is designed but was not fully tested. Not load-tested for high volume.
