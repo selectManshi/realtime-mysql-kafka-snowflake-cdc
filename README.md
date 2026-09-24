@@ -6,7 +6,7 @@ A cost-conscious CDC practice project that uses **AWS Aurora MySQL, AWS DMS, S3,
 ```
 Lambda (data generator, every 5 min)
   -> AWS Aurora MySQL Serverless v2
-  -> AWS DMS Serverless (full load + CDC)
+  -> AWS DMS Serverless (full load + CDC) 
   -> S3 (Parquet)
   -> Snowflake RAW.CDC_EVENTS   (scheduled Task: COPY INTO)
   -> Snowflake MIRROR.*         (Stream + Task: MERGE, columns _SYNCED_AT / _DELETED)
