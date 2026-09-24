@@ -1,0 +1,14 @@
+# Copy to terraform.tfvars (never commit that file)
+my_ip_cidr         = "x.x.x.x/32"          # curl.exe -4 ifconfig.me
+budget_email       = "you@example.com"
+monthly_budget_usd = 20
+
+# create_dms_vpc_role = false               # only if dms-vpc-role already exists in the account
+
+# Fill these AFTER `DESC INTEGRATION ECOM_S3_INT` in Snowflake (see snowflake/00_setup.sql)
+# snowflake_iam_user_arn = "arn:aws:iam::...:user/..."
+# snowflake_external_id  = "..."
+
+# Turn on after the data is loaded
+# start_dms      = true
+# replay_enabled = true
